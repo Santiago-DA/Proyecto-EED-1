@@ -24,12 +24,12 @@ public class ProyectoEED1 {
         Graph graph = new Graph();
         
         
-        FilesIO io = new FilesIO();
-        String users = io.getUsersString(io.file);
-        String relations = io.getEdgesString(io.file);
+        FilesIO fileManager = new FilesIO();
+        String users = fileManager.getUsersString(fileManager.file);
+        String relations = fileManager.getEdgesString(fileManager.file);
         
         
-        io.loadGraphData(users, relations, graph);
+        fileManager.loadGraphData(users, relations, graph);
         
         MainUI mainWindow = new MainUI(graph);
         mainWindow.setVisible(true);
