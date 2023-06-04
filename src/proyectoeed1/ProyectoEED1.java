@@ -21,7 +21,7 @@ public class ProyectoEED1 {
      */
     public static void main(String[] args) {
         
-        Graph x = new Graph();
+        Graph graph = new Graph();
         
         
         FilesIO io = new FilesIO();
@@ -29,9 +29,9 @@ public class ProyectoEED1 {
         String relations = io.getEdgesString(io.file);
         
         
-        io.loadGraphData(users, relations, x);
+        io.loadGraphData(users, relations, graph);
         
-        MainUI mainWindow = new MainUI(x);
+        MainUI mainWindow = new MainUI(graph);
         mainWindow.setVisible(true);
         
         
